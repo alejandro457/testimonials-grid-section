@@ -1,0 +1,18 @@
+@use "../abstracts/variables" as *;
+
+
+html {
+    font-size: 13px;
+}
+
+body {
+    background-color: $light-grayish-blue;
+    font-family: $primary-font;
+}
+
+.main {
+    padding: 2rem;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+}

@@ -1,0 +1,17 @@
+@use "../abstracts/variables" as *;
+
+.testimonials {
+    max-width: 411px;
+    display: grid;
+    gap: 2rem;
+
+    @media screen and (min-width: $tablet) {
+        max-width: 800px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (min-width: $desktop) {
+        max-width: 1100px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

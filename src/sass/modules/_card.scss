@@ -1,0 +1,83 @@
+@use "../abstracts/variables" as *;
+
+.card {
+    background-color: var(--bg-color, $white);
+    color: var(--color, $very-dark-blackish-blue);
+    border-radius: .5rem;
+    padding: 2rem 2.6rem 2.2rem 2.6rem;
+    box-shadow: 10px 10px 30px -10px $light-gray;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    align-items: center;
+
+    &__title {
+        font-size: 1.5rem;
+        font-weight: $semi-bold;
+        margin-bottom: 1.5rem;
+    }
+
+    &__content {
+        font-weight: $medium;
+        margin: 0;
+        line-height: 1.5;
+        opacity: .7;
+
+        &::before {
+            content: '“';
+            margin-right: .3rem;
+        }
+
+        &::after {
+            content: '”';
+            margin-left: .5rem;
+        }
+    }
+
+    &:first-child,
+    &:nth-child(2),
+    &:nth-child(4) {
+        --color: #{$light-grayish-blue};
+    }
+
+    &:first-child {
+        --bg-color: #{$moderate-violet};
+        --border-color: #A775F1;
+        position: relative;
+        z-index: 1;
+        
+        &::before {
+            content: url(../assets/bg-pattern-quotation.svg);
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translateX(-22px);
+            z-index: -1;
+        }
+    }
+    &:nth-child(2) {
+        --bg-color: #{$very_dark-grayish-blue};
+    }
+    &:nth-child(4) {
+        --bg-color: #{$very-dark-blackish-blue};
+        --border-color: #A775F1;
+    }
+
+    @media screen and (min-width: $tablet) {
+        &:first-child {
+            grid-column: 1 /span 2;
+        }
+        &:nth-child(4) {
+            grid-column: 2 / 4;
+        }
+        &:last-child {
+            grid-column: 1 /span 3;
+        }
+    }
+
+    @media screen and (min-width: $desktop) {
+        &:last-child {
+            grid-column: 4;
+            grid-row: 1 /span 2;
+        }
+    }
+}

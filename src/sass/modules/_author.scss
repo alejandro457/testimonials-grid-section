@@ -1,0 +1,26 @@
+@use "../abstracts/variables" as *;
+
+.author {
+    display: grid;
+    grid-template-columns: auto 1fr;
+
+    &__avatar {
+        grid-row: 1 /span 2;
+        width: 34px;
+        background-color: var(--border-color, transparent);
+        padding: 2px;
+        border-radius: 50%;
+        margin-right: 16px;
+    }
+
+    &__name,
+    &__role {
+        margin: 0;
+        font-weight: $medium;
+    }
+
+    &__role {
+        font-size: .85rem;
+        opacity: .5;
+    }
+}
