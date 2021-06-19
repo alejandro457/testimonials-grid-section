@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [frontendmentor.io/solutions/mobile-first-testimonials-grid-section-using-sass-and-bem-gBQOu2sxY](https://www.frontendmentor.io/solutions/mobile-first-testimonials-grid-section-using-sass-and-bem-gBQOu2sxY)
+- Live Site URL: [testimonials-grid-section-ten-xi.vercel.app](https://testimonials-grid-section-ten-xi.vercel.app/)
 
 ## My process
 
